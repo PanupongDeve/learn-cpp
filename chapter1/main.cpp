@@ -1,12 +1,16 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
 int main()
 {
-    std::cout << 2016 << " is today's year. "; //<< std::endl;
-    std::cout << 3 << " is today'n moth." << std::endl;
-    std::cout << 16 << " is today's day. " << std::endl;
+    int year = 2020, mon = 3, day = 16;
+    std::cout << "Today is: "
+        << std::setw (2) << std::setfill ('0') << day
+        << std::setw (2) << std::setfill ('0') << mon
+        << "."
+        << year << ".";
 
     return 0;
 }
